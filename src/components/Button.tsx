@@ -1,11 +1,11 @@
 /* eslint-disable no-nested-ternary */
 import { useContext } from "react";
 import styled from "styled-components";
-import { lighten } from "polished";
 import { AppContext } from "../context/AppProvider";
 import iconArrow from "../icons/arrow.svg";
 import iconArrowBlack from "../icons/arrowblack.svg";
 import iconClose from "../icons/close.svg";
+import iconCloseBlack from "../icons/closeblack.svg";
 import lightOrDark from "../utils/CheckColorLightOrDark";
 
 // eslint-disable-next-line no-use-before-define
@@ -22,10 +22,9 @@ const Container = styled.div<PropsButton>`
     justify-content: center;
     position: absolute;
     right: 0;
-    bottom: 20px;
+    bottom: 0;
     transition: 0.7s;
     &:hover {
-      background: ${lighten(0.1, "#000000")};
     }
     &.icon-close {
       &:hover {
@@ -45,22 +44,24 @@ function Button() {
   const isDarkColor = lightOrDark(bgColor);
 
   return (
-    <Container bgColor={isOpen ? "#000000" : bgColor}>
+    <Container bgColor={bgColor}>
       <button
         className={isOpen ? "icon-close" : "icon"}
         type="button"
         onClick={handleClickButton}
       >
-        <img
-          alt="Arrow Icon"
-          src={
-            isOpen
-              ? iconClose
-              : isDarkColor === "dark"
-              ? iconArrow
-              : iconArrowBlack
-          }
-        />
+        {isOpen && isDarkColor === "dark" && (
+          <img alt="Arrow Icon" src={iconClose} />
+        )}
+        {isOpen && isDarkColor === "light" && (
+          <img alt="Arrow Icon" src={iconCloseBlack} />
+        )}
+        {!isOpen && isDarkColor === "dark" && (
+          <img alt="Arrow Icon" src={iconArrow} />
+        )}
+        {!isOpen && isDarkColor === "light" && (
+          <img alt="Arrow Icon" src={iconArrowBlack} />
+        )}
       </button>
     </Container>
   );
