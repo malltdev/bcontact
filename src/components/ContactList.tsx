@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-useless-fragment */
 import { useContext } from "react";
 import styled from "styled-components";
 import { AppContext } from "../context/AppProvider";
@@ -7,28 +8,14 @@ import TelegramIcon from "../icons/telegram.svg";
 import emailIcon from "../icons/email.svg";
 import LigarIcon from "../icons/ligar.svg";
 
-const ContainerList = styled.div`
-  background: #fff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  padding: 10px 30px 10px 30px;
-
-  li {
-    list-style: none;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    color: #000;
-    line-height: 40px;
-  }
-`;
-
 const Container = styled.div`
-  position: absolute;
-  bottom: 10px;
-  right: 0px;
-  width: 174px;
-  padding: 20px;
-
+  position: relative;
+  // top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  //align-items: flex-end;
+  padding-top: 30px;
   a {
     color: #000;
     text-decoration: none;
@@ -47,12 +34,27 @@ const Container = styled.div`
   }
 `;
 
+const ContainerList = styled.div`
+  background: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px 30px 10px 30px;
+  width: 114px;
+  li {
+    list-style: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #000;
+    line-height: 40px;
+  }
+`;
+
 function ContactList() {
   const { listContacts, isOpen } = useContext(AppContext);
   const { linkWhatsapp, linkCallTo, linkTelegram, linkEmail } = listContacts;
 
   return (
-    <div>
+    <>
       {isOpen && (
         <Container>
           <ContainerList>
@@ -101,7 +103,7 @@ function ContactList() {
 
             {linkCallTo && (
               <li>
-                <a href={`tel:${linkCallTo}`} title="Ligar">
+                <a href={`tel:+${linkCallTo}`} title="Ligar">
                   <i>
                     <img src={LigarIcon} alt="Icone Ligar" />
                   </i>
@@ -113,7 +115,7 @@ function ContactList() {
           <Credits />
         </Container>
       )}
-    </div>
+    </>
   );
 }
 

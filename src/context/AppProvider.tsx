@@ -4,8 +4,21 @@ import React, { useState, useEffect, createContext } from "react";
 interface AppProviderProps {
   children: React.ReactNode;
 }
+interface PropsListContacts {
+  linkWhatsapp: string;
+  linkCallTo: string;
+  linkTelegram: string;
+  linkEmail: string;
+}
+interface AppContextProps {
+  isOpen: boolean;
+  bgColor: string;
+  listContacts: PropsListContacts;
+  handleClickButton: () => void;
+  setButtonColor: () => void;
+}
 
-export const AppContext = createContext({
+export const AppContext = createContext<AppContextProps>({
   isOpen: false,
   bgColor: "",
   listContacts: {
@@ -19,37 +32,47 @@ export const AppContext = createContext({
 });
 
 export function AppProvider({ children }: AppProviderProps) {
-  const [isOpen, setIsOpen] = useState(false);
   const [bgColor, setBgColor] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
   const [listContacts, setListContacts] = useState({
     linkWhatsapp: "",
     linkCallTo: "",
     linkTelegram: "",
     linkEmail: "",
   });
-  const el = document.getElementById("BContact");
+  const rootElement = document.getElementById("BContact");
 
   useEffect(() => {
-    const dataColor = el?.getAttribute("data-color") || "";
+    const dataColor = rootElement?.getAttribute("data-color") || "";
     if (dataColor) {
       setBgColor(dataColor);
-
       return;
     }
     setBgColor("#8D00FF");
   }, []);
 
   useEffect(() => {
-    const linkWhatsapp = el?.getAttribute("data-whatsapp") || "";
-    const linkCallTo = el?.getAttribute("data-callto") || "";
-    const linkTelegram = el?.getAttribute("data-telegram") || "";
-    const linkEmail = el?.getAttribute("data-email") || "";
+    const linkWhatsapp = rootElement?.getAttribute("data-whatsapp") || "";
+    const linkCallTo = rootElement?.getAttribute("data-callto") || "";
+    const linkTelegram = rootElement?.getAttribute("data-telegram") || "";
+    const linkEmail = rootElement?.getAttribute("data-email") || "";
     setListContacts({
       linkWhatsapp,
       linkCallTo,
       linkTelegram,
       linkEmail,
     });
+  }, []);
+
+  useEffect(() => {
+    const dataAlign = rootElement?.getAttribute("data-align") || "";
+    const parentContainer = document.querySelector("#BContact > div");
+
+    if (dataAlign === "left") {
+      parentContainer!.classList.add("align-left");
+      return;
+    }
+    parentContainer!.classList.add("align-right");
   }, []);
 
   const handleClickButton = () => {

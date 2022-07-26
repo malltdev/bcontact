@@ -1,14 +1,26 @@
+import styled from "styled-components";
+import { AppProvider } from "./context/AppProvider";
 import Button from "./components/Button";
 import ContactList from "./components/ContactList";
-import { AppProvider } from "./context/AppProvider";
 import GlobalStyles from "./utils/GlobalStyles";
+
+interface PropsContainer {
+  isAlign?: string;
+}
+
+const Container = styled.div<PropsContainer>`
+  position: fixed;
+  bottom: 20px;
+`;
 
 function App() {
   return (
     <AppProvider>
-      <GlobalStyles />
-      <ContactList />
-      <Button />
+      <Container>
+        <GlobalStyles />
+        <ContactList />
+        <Button />
+      </Container>
     </AppProvider>
   );
 }

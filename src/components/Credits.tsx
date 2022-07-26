@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const Container = styled.div`
+  width: 174px;
+  text-align: center;
   p {
     font-family: "Roboto", sans-serif;
     font-size: 9px;
@@ -8,6 +10,10 @@ const Container = styled.div`
   }
   strong {
     font-weight: bold;
+    a {
+      color: #000;
+      display: inline-block;
+    }
   }
 `;
 
@@ -15,7 +21,10 @@ function Credits() {
   return (
     <Container>
       <p>
-        Powered by <strong>B.Contact</strong>
+        Powered by{" "}
+        <strong>
+          <a href="https://bcontact.com.br">B.Contact</a>
+        </strong>
       </p>
     </Container>
   );

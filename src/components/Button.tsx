@@ -8,8 +8,12 @@ import iconClose from "../icons/close.svg";
 import iconCloseBlack from "../icons/closeblack.svg";
 import lightOrDark from "../utils/CheckColorLightOrDark";
 
-// eslint-disable-next-line no-use-before-define
+interface PropsButton {
+  bgColor: string;
+}
+
 const Container = styled.div<PropsButton>`
+  display: flex;
   button {
     width: 46px;
     height: 46px;
@@ -20,9 +24,6 @@ const Container = styled.div<PropsButton>`
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    right: 0;
-    bottom: 0;
     transition: 0.7s;
     &:hover {
     }
@@ -34,10 +35,6 @@ const Container = styled.div<PropsButton>`
     }
   }
 `;
-
-interface PropsButton {
-  bgColor: string;
-}
 
 function Button() {
   const { isOpen, handleClickButton, bgColor } = useContext(AppContext);
