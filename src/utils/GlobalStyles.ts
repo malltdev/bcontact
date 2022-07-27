@@ -7,20 +7,6 @@ const GlobalStyles = createGlobalStyle`
   width: auto;
   white-space: nowrap;
   z-index:-1;
-
-  }
-  .align-right{
-    right:20px;
-   &>div{
-    justify-content: flex-end;
-    
-   }
-  }
-  .align-left{
-    left:20px;
-    &>div{
-    justify-content: flex-start;
-   }
   }
 `;
 
