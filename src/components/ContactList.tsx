@@ -7,14 +7,13 @@ import WhatsappIcon from "../icons/whatsapp.svg";
 import TelegramIcon from "../icons/telegram.svg";
 import emailIcon from "../icons/email.svg";
 import LigarIcon from "../icons/ligar.svg";
+import Error from "./Error";
 
 const Container = styled.div`
   position: relative;
-  // top: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  //align-items: flex-end;
   padding-top: 30px;
   a {
     color: #000;
@@ -50,69 +49,74 @@ const ContainerList = styled.div`
 `;
 
 function ContactList() {
-  const { listContacts, isOpen } = useContext(AppContext);
+  const { listContacts, isOpen, error } = useContext(AppContext);
   const { linkWhatsapp, linkCallTo, linkTelegram, linkEmail } = listContacts;
 
   return (
     <>
       {isOpen && (
         <Container>
-          <ContainerList>
-            {linkWhatsapp && (
-              <li>
-                <a
-                  href={`https://wa.me/${linkWhatsapp}`}
-                  target="_blank"
-                  title="Whatsapp"
-                  rel="noreferrer"
-                >
-                  <i>
-                    <img src={WhatsappIcon} alt="Icone Whatsapp" />
-                  </i>
-                  Whatsapp
-                </a>
-              </li>
-            )}
+          {!error && (
+            <>
+              <ContainerList>
+                {linkWhatsapp && (
+                  <li>
+                    <a
+                      href={`https://wa.me/${linkWhatsapp}`}
+                      target="_blank"
+                      title="Whatsapp"
+                      rel="noreferrer"
+                    >
+                      <i>
+                        <img src={WhatsappIcon} alt="Icone Whatsapp" />
+                      </i>
+                      Whatsapp
+                    </a>
+                  </li>
+                )}
 
-            {linkTelegram && (
-              <li>
-                <a
-                  href={`https://t.me/${linkTelegram}`}
-                  target="_blank"
-                  title="Telegram"
-                  rel="noreferrer"
-                >
-                  <i>
-                    <img src={TelegramIcon} alt="Icone Telegram" />
-                  </i>
-                  Telegram
-                </a>
-              </li>
-            )}
+                {linkTelegram && (
+                  <li>
+                    <a
+                      href={`https://t.me/${linkTelegram}`}
+                      target="_blank"
+                      title="Telegram"
+                      rel="noreferrer"
+                    >
+                      <i>
+                        <img src={TelegramIcon} alt="Icone Telegram" />
+                      </i>
+                      Telegram
+                    </a>
+                  </li>
+                )}
 
-            {linkEmail && (
-              <li>
-                <a href={`mailto:${linkEmail}`} title="Email">
-                  <i>
-                    <img src={emailIcon} alt="Icone Email" />
-                  </i>
-                  Email
-                </a>
-              </li>
-            )}
+                {linkEmail && (
+                  <li>
+                    <a href={`mailto:${linkEmail}`} title="Email">
+                      <i>
+                        <img src={emailIcon} alt="Icone Email" />
+                      </i>
+                      Email
+                    </a>
+                  </li>
+                )}
 
-            {linkCallTo && (
-              <li>
-                <a href={`tel:+${linkCallTo}`} title="Ligar">
-                  <i>
-                    <img src={LigarIcon} alt="Icone Ligar" />
-                  </i>
-                  Ligar
-                </a>
-              </li>
-            )}
-          </ContainerList>
+                {linkCallTo && (
+                  <li>
+                    <a href={`tel:+${linkCallTo}`} title="Ligar">
+                      <i>
+                        <img src={LigarIcon} alt="Icone Ligar" />
+                      </i>
+                      Ligar
+                    </a>
+                  </li>
+                )}
+              </ContainerList>
+            </>
+          )}
           <Credits />
+          {error && <Error />}
         </Container>
       )}
     </>

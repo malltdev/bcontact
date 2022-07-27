@@ -1,4 +1,3 @@
-/* eslint-disable no-nested-ternary */
 import { useContext } from "react";
 import styled from "styled-components";
 import { AppContext } from "../context/AppProvider";
@@ -25,8 +24,7 @@ const Container = styled.div<PropsButton>`
     align-items: center;
     justify-content: center;
     transition: 0.7s;
-    &:hover {
-    }
+
     &.icon-close {
       &:hover {
         transition: 0.7s;
