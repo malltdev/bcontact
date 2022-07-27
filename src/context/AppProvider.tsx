@@ -64,17 +64,6 @@ export function AppProvider({ children }: AppProviderProps) {
     });
   }, []);
 
-  useEffect(() => {
-    const dataAlign = rootElement?.getAttribute("data-align") || "";
-    const parentContainer = document.querySelector("#BContact > div");
-
-    if (dataAlign === "left") {
-      parentContainer!.classList.add("align-left");
-      return;
-    }
-    parentContainer!.classList.add("align-right");
-  }, []);
-
   const handleClickButton = () => {
     setIsOpen(!isOpen);
   };

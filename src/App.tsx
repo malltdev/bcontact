@@ -4,13 +4,22 @@ import Button from "./components/Button";
 import ContactList from "./components/ContactList";
 import GlobalStyles from "./utils/GlobalStyles";
 
-interface PropsContainer {
-  isAlign?: string;
-}
+const rootElement = document.getElementById("BContact");
+const dataAlign = rootElement?.getAttribute("data-align") || "";
+const dataAlignLeft = dataAlign === "left";
 
-const Container = styled.div<PropsContainer>`
+const Container = styled.div`
   position: fixed;
   bottom: 20px;
+  ${dataAlignLeft
+    ? `left: 20px;
+    & > div {
+      justify-content: flex-start;
+    }`
+    : `right: 20px;
+      & > div {
+        justify-content: flex-end;
+      }`}
 `;
 
 function App() {
