@@ -74,12 +74,6 @@ export function AppProvider({ children }: AppProviderProps) {
       setError(!error);
     }
 
-    console.log(
-      "checkErrorExists",
-      checkColor,
-      checkLinkWhatsapp,
-      checkLinkCallTo
-    );
     setListContacts({
       linkWhatsapp,
       linkCallTo,
