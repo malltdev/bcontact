@@ -44,6 +44,7 @@ export function AppProvider({ children }: AppProviderProps) {
     linkEmail: "",
   });
   const rootElement = document.getElementById("BContact");
+  const dataColor = rootElement?.getAttribute("data-color") || "";
 
   useEffect(() => {
     const linkWhatsapp = rootElement?.getAttribute("data-whatsapp") || "";
@@ -51,8 +52,9 @@ export function AppProvider({ children }: AppProviderProps) {
     const linkTelegram = rootElement?.getAttribute("data-telegram") || "";
     const linkEmail = rootElement?.getAttribute("data-email") || "";
 
-    const checkLinkWhatsapp = linkWhatsapp.match(/\d+/g);
-    const checkLinkCallTo = linkWhatsapp.match(/\d+/g);
+    const checkColor = dataColor.match("^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$");
+    const checkLinkWhatsapp = linkWhatsapp.match(/^[0-9]+$/);
+    const checkLinkCallTo = linkCallTo.match(/^[0-9]+$/);
     const checkLinkTelegram = linkTelegram.match(
       "^(?=.{5,32}$)(?!.*__)(?!^(telegram|admin|support))[a-z][a-z0-9_]*[a-z0-9]$"
     );
@@ -61,15 +63,23 @@ export function AppProvider({ children }: AppProviderProps) {
     );
 
     const checkErrorExists = [
+      checkColor,
       checkLinkWhatsapp,
       checkLinkCallTo,
       checkLinkTelegram,
       checkLinkEmail,
     ].includes(null);
+
     if (checkErrorExists) {
       setError(!error);
     }
 
+    console.log(
+      "checkErrorExists",
+      checkColor,
+      checkLinkWhatsapp,
+      checkLinkCallTo
+    );
     setListContacts({
       linkWhatsapp,
       linkCallTo,
@@ -79,8 +89,7 @@ export function AppProvider({ children }: AppProviderProps) {
   }, []);
 
   useEffect(() => {
-    const dataColor = rootElement?.getAttribute("data-color") || "";
-    if (dataColor) {
+    if (dataColor.match("^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$")) {
       setBgColor(dataColor);
       return;
     }
