@@ -41,6 +41,7 @@ function Button() {
   return (
     <Container bgColor={bgColor}>
       <button
+        data-testid="button-bcontact"
         className={isOpen ? "icon-close" : "icon"}
         type="button"
         onClick={handleClickButton}

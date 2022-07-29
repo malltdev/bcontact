@@ -5,7 +5,7 @@ import Button from "./components/Button";
 import ContactList from "./components/ContactList";
 import GlobalStyles from "./utils/GlobalStyles";
 
-interface PropsContainer {
+export interface PropsContainer {
   align: boolean;
 }
 

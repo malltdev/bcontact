@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-no-constructed-context-values */
 import React, { useState, useEffect, createContext } from "react";
 
@@ -52,15 +53,26 @@ export function AppProvider({ children }: AppProviderProps) {
     const linkTelegram = rootElement?.getAttribute("data-telegram") || "";
     const linkEmail = rootElement?.getAttribute("data-email") || "";
 
-    const checkColor = dataColor.match("^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$");
-    const checkLinkWhatsapp = linkWhatsapp.match(/^[0-9]+$/);
-    const checkLinkCallTo = linkCallTo.match(/^[0-9]+$/);
-    const checkLinkTelegram = linkTelegram.match(
-      "^(?=.{5,32}$)(?!.*__)(?!^(telegram|admin|support))[a-z][a-z0-9_]*[a-z0-9]$"
-    );
-    const checkLinkEmail = linkEmail.match(
-      "([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|\"([]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|[[\t -Z^-~]*])"
-    );
+    /* if (!linkWhatsapp || !linkCallTo || !linkTelegram || !linkEmail)
+      setError(false); */
+
+    const checkColor = dataColor
+      ? dataColor.match("^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$")
+      : "";
+    const checkLinkWhatsapp = linkWhatsapp
+      ? linkWhatsapp.match(/^[0-9]+$/)
+      : "";
+    const checkLinkCallTo = linkCallTo ? linkCallTo.match(/^[0-9]+$/) : "";
+    const checkLinkTelegram = linkTelegram
+      ? linkTelegram.match(
+          "^(?=.{5,32}$)(?!.*__)(?!^(telegram|admin|support))[a-z][a-z0-9_]*[a-z0-9]$"
+        )
+      : "";
+    const checkLinkEmail = linkEmail
+      ? linkEmail.match(
+          "([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|\"([]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|[[\t -Z^-~]*])"
+        )
+      : "";
 
     const checkErrorExists = [
       checkColor,

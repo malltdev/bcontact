@@ -55,12 +55,13 @@ function ContactList() {
   return (
     <>
       {isOpen && (
-        <Container>
+        <Container data-testid="container-contacts">
           {!error && (
             <>
               <ContainerList>
                 {linkWhatsapp && (
-                  <li>
+                  // eslint-disable-next-line jsx-a11y/aria-role
+                  <li role="menuitem">
                     <a
                       href={`https://wa.me/${linkWhatsapp}`}
                       target="_blank"
@@ -76,7 +77,7 @@ function ContactList() {
                 )}
 
                 {linkTelegram && (
-                  <li>
+                  <li data-testid="list-contact">
                     <a
                       href={`https://t.me/${linkTelegram}`}
                       target="_blank"
@@ -92,7 +93,7 @@ function ContactList() {
                 )}
 
                 {linkEmail && (
-                  <li>
+                  <li data-testid="list-contact">
                     <a href={`mailto:${linkEmail}`} title="Email">
                       <i>
                         <img src={emailIcon} alt="Icone Email" />
@@ -103,7 +104,7 @@ function ContactList() {
                 )}
 
                 {linkCallTo && (
-                  <li>
+                  <li data-testid="list-contact">
                     <a href={`tel:+${linkCallTo}`} title="Ligar">
                       <i>
                         <img src={LigarIcon} alt="Icone Ligar" />
