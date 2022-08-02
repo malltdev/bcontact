@@ -70,9 +70,7 @@ export function AppProvider({ children }: AppProviderProps) {
         )
       : "";
     const checkLinkEmail = linkEmail
-      ? linkEmail.match(
-          "([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|\"([]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|[[\t -Z^-~]*])"
-        )
+      ? linkEmail.match(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/)
       : "";
 
     const checkErrorExists = [

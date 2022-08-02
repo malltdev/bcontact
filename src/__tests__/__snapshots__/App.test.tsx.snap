@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return an error message if the email attribute is not a valid email 1`] = `
+<div
+  data-email="marcuslorenlopes@gmailcom"
+  id="BContact"
+>
+  <div
+    class="sc-jSMfEi cqPiGw"
+  >
+    <div
+      class="sc-hKMtZM iiASdC"
+      data-testid="container-contacts"
+    >
+      <div
+        class="sc-gsnTZi jOOgZk"
+      >
+        <p>
+          Powered by
+           
+          <strong>
+            <a
+              href="https://bcontact.com.br"
+            >
+              B.Contact
+            </a>
+          </strong>
+        </p>
+      </div>
+      <div
+        class="sc-dkzDqf cZWTFM"
+      >
+        <p>
+          ERRO! parâmetro(s) inválido(s)
+        </p>
+      </div>
+    </div>
+    <div
+      class="sc-bczRLJ bknHuF"
+    >
+      <button
+        class="icon-close"
+        data-testid="button-bcontact"
+        type="button"
+      >
+        <img
+          alt="Arrow Icon"
+          src="close.svg"
+        />
+      </button>
+    </div>
+  </div>
+</div>
+`;
