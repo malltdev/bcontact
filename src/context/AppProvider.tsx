@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-no-constructed-context-values */
 import React, { useState, useEffect, createContext } from "react";
-import ContactList from "../components/ContactList";
 
 interface AppProviderProps {
   children: React.ReactNode;
