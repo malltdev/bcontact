@@ -60,8 +60,7 @@ function ContactList() {
             <>
               <ContainerList>
                 {linkWhatsapp && (
-                  // eslint-disable-next-line jsx-a11y/aria-role
-                  <li role="menuitem">
+                  <li>
                     <a
                       href={`https://wa.me/${linkWhatsapp}`}
                       target="_blank"
@@ -117,7 +116,7 @@ function ContactList() {
             </>
           )}
           <Credits />
-          {error && <Error />}
+          {error && <Error message="ERRO! parâmetro(s) inválido(s)" />}
         </Container>
       )}
     </>

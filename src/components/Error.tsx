@@ -9,10 +9,13 @@ const Container = styled.div`
   }
 `;
 
-function Error() {
+interface PropsError {
+  message: string;
+}
+function Error({ message }: PropsError) {
   return (
     <Container>
-      <p>ERRO! parâmetro(s) inválido(s) </p>
+      <p>{message}</p>
     </Container>
   );
 }

@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-no-constructed-context-values */
 import React, { useState, useEffect, createContext } from "react";
+import ContactList from "../components/ContactList";
 
 interface AppProviderProps {
   children: React.ReactNode;
@@ -53,8 +54,8 @@ export function AppProvider({ children }: AppProviderProps) {
     const linkTelegram = rootElement?.getAttribute("data-telegram") || "";
     const linkEmail = rootElement?.getAttribute("data-email") || "";
 
-    /* if (!linkWhatsapp || !linkCallTo || !linkTelegram || !linkEmail)
-      setError(false); */
+    if (!linkWhatsapp && !linkCallTo && !linkTelegram && !linkEmail)
+      setError(true);
 
     const checkColor = dataColor
       ? dataColor.match("^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$")

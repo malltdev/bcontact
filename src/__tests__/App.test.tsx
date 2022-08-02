@@ -37,7 +37,7 @@ test("should return when clicking a container with the list of contacts", async 
   // expect(containerContact).toMatchSnapshot();
 });
 
-// deve retornar um elemento ao adicionar apenas um atributo na tag html
+// deve retornar 1 elemento ao adicionar apenas um atributo na tag html
 test("should return an element when adding only one attribute in html tag", async () => {
   const BContact = document.createElement("div");
   BContact.setAttribute("id", "BContact");
@@ -54,4 +54,21 @@ test("should return an element when adding only one attribute in html tag", asyn
   expect(screen.queryByText("Telegram")).not.toBeInTheDocument();
   expect(screen.queryByText("Email")).not.toBeInTheDocument();
   expect(screen.queryByText("Ligar")).not.toBeInTheDocument();
+});
+
+// deve retornar uma mensagem de erro caso nenhum atributo seja adicionado
+test("should return an error message if no attributes are added", async () => {
+  const BContact = document.createElement("div");
+  BContact.setAttribute("id", "BContact");
+
+  render(<App />, {
+    container: document.body.appendChild(BContact),
+  });
+
+  const buttonElement = screen.getByTestId("button-bcontact");
+  userEvent.click(buttonElement);
+
+  expect(
+    screen.queryByText("ERRO! parâmetro(s) inválido(s)")
+  ).toBeInTheDocument();
 });
