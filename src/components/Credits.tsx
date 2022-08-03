@@ -11,7 +11,7 @@ const Container = styled.div`
   strong {
     font-weight: bold;
     a {
-      color: #000;
+      color: #000 !important;
       display: inline-block;
     }
   }

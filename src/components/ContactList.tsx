@@ -16,7 +16,7 @@ const Container = styled.div`
   align-items: flex-start;
   padding-top: 30px;
   a {
-    color: #000;
+    color: #000 !important;
     text-decoration: none;
     display: flex;
 
@@ -28,7 +28,7 @@ const Container = styled.div`
       width: 21px;
     }
     &:hover {
-      color: #393737;
+      color: #393737 !important;
     }
   }
 `;
