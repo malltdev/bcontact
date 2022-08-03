@@ -3,10 +3,12 @@ import { useContext } from "react";
 import styled from "styled-components";
 import { AppContext } from "../context/AppProvider";
 import Credits from "./Credits";
-import WhatsappIcon from "../icons/whatsapp.svg";
-import TelegramIcon from "../icons/telegram.svg";
-import emailIcon from "../icons/email.svg";
-import LigarIcon from "../icons/ligar.svg";
+import {
+  WhatsappIcon,
+  TelegramIcon,
+  emailIcon,
+  LigarIcon,
+} from "../utils/IconsUrls";
 import Error from "./Error";
 
 const Container = styled.div`
