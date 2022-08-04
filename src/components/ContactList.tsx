@@ -40,7 +40,7 @@ const ContainerList = styled.div`
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 10px 30px 10px 30px;
-  width: 114px;
+  //width: 114px;
   li {
     list-style: none;
     font-family: "Roboto", sans-serif;

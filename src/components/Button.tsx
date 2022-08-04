@@ -26,6 +26,9 @@ const Container = styled.div<PropsButton>`
     transition: 0.7s;
 
     &.icon-close {
+      &:focus {
+        outline: none;
+      }
       &:hover {
         transition: 0.7s;
         transform: rotate(180deg);
