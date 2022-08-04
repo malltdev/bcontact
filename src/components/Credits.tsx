@@ -7,6 +7,8 @@ const Container = styled.div`
     font-family: "Roboto", sans-serif;
     font-size: 9px;
     padding-top: 5px;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
   strong {
     font-weight: bold;
