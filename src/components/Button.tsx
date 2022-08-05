@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import styled from "styled-components";
 import { AppContext } from "../context/AppProvider";
-import iconArrow from "../icons/arrow.svg";
-import iconArrowBlack from "../icons/arrowblack.svg";
-import iconClose from "../icons/close.svg";
-import iconCloseBlack from "../icons/closeblack.svg";
+import {
+  iconArrow,
+  iconArrowBlack,
+  iconClose,
+  iconCloseBlack,
+} from "../utils/IconsUrls";
 import lightOrDark from "../utils/CheckColorLightOrDark";
 
 interface PropsButton {
