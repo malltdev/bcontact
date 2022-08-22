@@ -29,7 +29,7 @@ Abaixo as tecnologias utilizadas para construção da aplicação
 
 ## Demo
 
-[Acesse ](https://mallt-bcontact.netlify.app/)
+[Clique Aqui](https://mallt-bcontact.netlify.app/)
 
 ## Configurações necessárias
 
