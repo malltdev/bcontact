@@ -4,6 +4,7 @@
 <p align="center">Compartilhador de Contato que pode ser utilizado em qualquer site/sistema</p>
 
 <h2 align="center"><img src="./src/icons/screenshot.jpg" alt="screenshot bcontact" /></h2>
+<p align="center">[DEMO](https://mallt-bcontact.netlify.app/)</p>
 
 ## Sobre o projeto
 
@@ -37,10 +38,6 @@ Abaixo as tecnologias utilizadas para construção da aplicação
 - data-align (opcional): adiciona alinhamento ao widget. Exemplo: right ou left
 
 ---
-
-## Demo
-
-[Clique Aqui](https://mallt-bcontact.netlify.app/)
 
 ## Configurações necessárias
 
