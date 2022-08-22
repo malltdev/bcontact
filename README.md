@@ -22,6 +22,8 @@ Abaixo as tecnologias utilizadas para construção da aplicação
 - [ReactJS](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [StyledComponents](https://styled-components.com)
+- [Jest](https://jestjs.io)
+- [Testing Library](https://testing-library.com/)
 
 ---
 
