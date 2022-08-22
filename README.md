@@ -3,14 +3,6 @@
 </h1>
 <p align="center">Compartilhador de Contato que pode ser utilizado em qualquer site/sistema</p>
 
-<p align="center">
- <a href="#sobre-o-projeto">Sobre o Projeto</a> •
- <a href="#tecnologias">Tecnologias</a> •
- <a href="#configurações-necessárias">Configurações necessárias</a> •
- <a href="#licença">Licença</a> •
- <a href="#autor">Autor</a>
-</p>
-
 ## Sobre o projeto
 
 O projeto tem como objetivo o desenvolvimento de um widget de contato que mostra os atalhos de contato para os aplicativos multiplataformas de mensagens instantâneas e chamadas de voz mais conhecidos. Além dos tradicionais atalhos para contato por e-mail e ligação
