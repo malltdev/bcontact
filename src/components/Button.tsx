@@ -26,11 +26,10 @@ const Container = styled.div<PropsButton>`
     align-items: center;
     justify-content: center;
     transition: 0.7s;
-
+    &:focus {
+      outline: none;
+    }
     &.icon-close {
-      &:focus {
-        outline: none;
-      }
       &:hover {
         transition: 0.7s;
         transform: rotate(180deg);

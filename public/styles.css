@@ -1,0 +1,16 @@
+body{
+  background-color:#e5e5e5;
+ 
+}
+#main{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+}
+body h1{
+  text-align:center; font-family: 'Roboto', sans-serif;
+  font-size:30px;
+color:#8d00ff;
+}

@@ -1,46 +1,84 @@
-# Getting Started with Create React App
+<h1 align="center">
+  <img alt="Logo" src="./public/bcontact-logo.svg" alt="">
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+   BContact - Compartilhador de Contato
+</h1>
+<p align="center">Compartilhador de Contato que pode ser utilizado em qualquer site/sistema</p>
 
-## Available Scripts
+<p align="center">
+ <a href="#sobre-o-projeto">Sobre o Projeto</a> •
+ <a href="#tecnologias">Tecnologias</a> •
+ <a href="#configurações-necessárias">Configurações necessárias</a> •
+ <a href="#licença">Licença</a> •
+ <a href="#autor">Autor</a>
+</p>
 
-In the project directory, you can run:
+## Sobre o projeto
 
-### `yarn start`
+O projeto tem como objetivo o desenvolvimento de um widget de contato que mostra os atalhos de contato para os aplicativos multiplataformas de mensagens instantâneas e chamadas de voz mais conhecidos. Além dos tradicionais atalhos para contato por e-mail e ligação
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A aplicação foi desenvolvida utilizando o ReactJS.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `yarn test`
+## Melhorias
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Logo mais adição de link para Facebook Messenger
 
-### `yarn build`
+## Tecnologias
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Abaixo as tecnologias utilizadas para construção da aplicação
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [ReactJS](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [StyledComponents](https://styled-components.com)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
+## Configurações necessárias
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### **Requisitos**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Necessário realizar as instalações:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [Git](https://git-scm.com/)
+- [Node](https://nodejs.org)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### **Clone do projeto**
 
-## Learn More
+```bash
+# Execute o comando git clone para realizar o clone do repositório
+$ git clone https://github.com/malltdev/bcontact
+# Entre na pasta do repositório clonado
+$ cd bcontact
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **Iniciando o projeto**
+
+```bash
+# Execute npm i para instalar as dependências
+$ npm i
+
+
+# Para iniciar a aplicação
+$ npm start
+
+```
+
+---
+
+## Nota
+
+Este projeto não deve ser usado em produção, é apenas para fins de portfólio/recrutamento para isso use o build oficial https://bcontact.com.br acesse para mais informações.
+
+---
+
+## Autor
+
+Desenvolvido por Mallt 😀 Entre em contato!
+
+[![Linkedin Badge](https://img.shields.io/badge/-Nelson-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marcustorresweb/)](https://www.linkedin.com/in/marcustorresweb/)
+[![Gmail Badge](https://img.shields.io/badge/-malltapps0@gmail.com-red?style=flat-square&link=mailto:malltsapps0@gmail.com)](mailto:malltsapps0@gmail.com)
