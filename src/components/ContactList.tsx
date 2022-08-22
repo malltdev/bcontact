@@ -47,6 +47,9 @@ const ContainerList = styled.div`
     font-weight: 400;
     color: #000;
     line-height: 40px;
+    img {
+      max-width: none;
+    }
   }
 `;
 
