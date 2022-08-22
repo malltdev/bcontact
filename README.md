@@ -1,7 +1,5 @@
-  <img align="center" alt="Logo" src="./public/bcontact-logo.svg" alt="">
-
 <h1 align="center">
-   BContact - Compartilhador de Contato
+   <img alt="Logo" src="./public/bcontact-logo.svg" alt=""> - Compartilhador de Contato
 </h1>
 <p align="center">Compartilhador de Contato que pode ser utilizado em qualquer site/sistema</p>
 
