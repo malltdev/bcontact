@@ -3,6 +3,8 @@
 </h1>
 <p align="center">Compartilhador de Contato que pode ser utilizado em qualquer site/sistema</p>
 
+<h2 align="center"><img src="./src/icons/screenshot.jpg" alt="screenshot bcontact" /></h2>
+
 ## Sobre o projeto
 
 O projeto tem como objetivo o desenvolvimento de um widget de contato que mostra os atalhos de contato para os aplicativos multiplataformas de mensagens instantâneas e chamadas de voz mais conhecidos. Além dos tradicionais atalhos para contato por e-mail e ligação
@@ -75,7 +77,7 @@ $ npm start
 
 ## Nota
 
-Este projeto não deve ser usado em produção, é apenas para fins de portfólio/recrutamento para isso use o build oficial https://bcontact.com.br acesse para mais informações.
+Este projeto não deve ser usado em produção, é apenas para fins de portfólio/recrutamento para produção use o build oficial https://bcontact.com.br Acesse para mais informações.
 
 ---
 
