@@ -8,9 +8,14 @@ body{
   align-items:center;
   justify-content:center;
   flex-direction: column;
+  font-family: 'Roboto', sans-serif;
 }
-body h1{
-  text-align:center; font-family: 'Roboto', sans-serif;
-  font-size:30px;
-color:#8d00ff;
+h1{
+ text-align:center; 
+ font-size:30px;
+ color:#8d00ff;
 }
+p{
+font-size:11px;
+}
+
