@@ -1,6 +1,4 @@
-<h1 align="center">
-  <img alt="Logo" src="./public/bcontact-logo.svg" alt="">
-</h1>
+  <img align="center" alt="Logo" src="./public/bcontact-logo.svg" alt="">
 
 <h1 align="center">
    BContact - Compartilhador de Contato
