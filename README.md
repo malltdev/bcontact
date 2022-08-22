@@ -80,5 +80,5 @@ Este projeto não deve ser usado em produção, é apenas para fins de portfóli
 
 Desenvolvido por Mallt 😀 Entre em contato!
 
-[![Linkedin Badge](https://img.shields.io/badge/-Nelson-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marcustorresweb/)](https://www.linkedin.com/in/marcustorresweb/)
+[![Linkedin Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/marcustorresweb/)](https://www.linkedin.com/in/marcustorresweb/)
 [![Gmail Badge](https://img.shields.io/badge/-malltapps0@gmail.com-red?style=flat-square&link=mailto:malltsapps0@gmail.com)](mailto:malltsapps0@gmail.com)
