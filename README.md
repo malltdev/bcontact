@@ -25,6 +25,15 @@ Abaixo as tecnologias utilizadas para construção da aplicação
 - [Jest](https://jestjs.io)
 - [Testing Library](https://testing-library.com/)
 
+## Parâmetros do Widget (data atributos)
+
+- data-color (opcional): adicionar cor ao botão. (somente permitido cores hexadecimais)
+- data-telegram (opcional): adiciona username do telegram
+- data-callto (opcional): adiciona número de telefone para ligação
+- data-email (opcional): adiciona e-mail para contato
+- data-whatsapp (opcional): adiciona número whatsapp para contato
+- data-align (opcional): adiciona alinhamento ao widget. Exemplo: right ou left
+
 ---
 
 ## Demo
