@@ -48,7 +48,7 @@ const ContainerList = styled.div`
     color: #000;
     line-height: 40px;
     img {
-      max-width: none;
+      max-width: none !important;
     }
   }
 `;
