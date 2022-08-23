@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { useEffect, useState } from "react";
 import { AppProvider } from "./context/AppProvider";
 import Button from "./components/Button";
@@ -12,16 +12,21 @@ export interface PropsContainer {
 const Container = styled.div<PropsContainer>`
   position: fixed;
   bottom: 20px;
+  z-index: 1000;
   ${(props) =>
     props.align
-      ? `left: 20px;
-    & > div {
-      justify-content: flex-start;
-    }`
-      : `right: 20px;
-      & > div {
-        justify-content: flex-end;
-      }`}
+      ? css`
+          left: 20px;
+          & > div {
+            justify-content: flex-start;
+          }
+        `
+      : css`
+          right: 20px;
+          & > div {
+            justify-content: flex-end;
+          }
+        `}
 `;
 
 function App() {
