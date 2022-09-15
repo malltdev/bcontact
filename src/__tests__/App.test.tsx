@@ -9,8 +9,8 @@ test("should return a button", () => {
   expect(buttonElement).toBeInTheDocument();
 });
 
-// deve retornar ao clicar em um container com a lista de contatos
-test("should return when clicking a container with the list of contacts", async () => {
+// deve retornar ao clicar no botão um container com a lista de contatos
+test("should return when clicking on the button a container with the list of contacts", async () => {
   const BContact = document.createElement("div");
   BContact.setAttribute("id", "BContact");
   BContact.setAttribute("data-color", "#2ea6d9");
@@ -34,7 +34,7 @@ test("should return when clicking a container with the list of contacts", async 
   expect(await screen.findByText("Email")).toBeInTheDocument();
   expect(await screen.findByText("Ligar")).toBeInTheDocument();
 
-  // expect(containerContact).toMatchSnapshot();
+  expect(containerContact).toMatchSnapshot();
 });
 
 // deve retornar 1 elemento ao adicionar apenas um atributo na tag html

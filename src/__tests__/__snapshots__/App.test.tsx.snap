@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return when clicking a container with the list of contacts 1`] = `
+<div
+  class="sc-hKMtZM eFmTwW"
+  data-testid="container-contacts"
+>
+  <div
+    class="sc-eCYdqJ itnBEX"
+  >
+    <li>
+      <a
+        href="https://wa.me/21989710023"
+        rel="noreferrer"
+        target="_blank"
+        title="Whatsapp"
+      >
+        <i>
+          <img
+            alt="Icone Whatsapp"
+            src="https://raw.githubusercontent.com/malltdev/bcontact/main/lib/icons/whatsapp.svg"
+          />
+        </i>
+        Whatsapp
+      </a>
+    </li>
+    <li
+      data-testid="list-contact"
+    >
+      <a
+        href="https://t.me/marcuslorenlopes"
+        rel="noreferrer"
+        target="_blank"
+        title="Telegram"
+      >
+        <i>
+          <img
+            alt="Icone Telegram"
+            src="https://raw.githubusercontent.com/malltdev/bcontact/main/lib/icons/telegram.svg"
+          />
+        </i>
+        Telegram
+      </a>
+    </li>
+    <li
+      data-testid="list-contact"
+    >
+      <a
+        href="mailto:marcusltorres@gmail.com"
+        title="Email"
+      >
+        <i>
+          <img
+            alt="Icone Email"
+            src="https://raw.githubusercontent.com/malltdev/bcontact/main/lib/icons/email.svg"
+          />
+        </i>
+        Email
+      </a>
+    </li>
+    <li
+      data-testid="list-contact"
+    >
+      <a
+        href="tel:+21989710023"
+        title="Ligar"
+      >
+        <i>
+          <img
+            alt="Icone Ligar"
+            src="https://raw.githubusercontent.com/malltdev/bcontact/main/lib/icons/ligar.svg"
+          />
+        </i>
+        Ligar
+      </a>
+    </li>
+  </div>
+  <div
+    class="sc-gsnTZi dIYHNY"
+  >
+    <p>
+      Powered by
+       
+      <strong>
+        <a
+          href="https://bcontact.com.br"
+        >
+          B.Contact
+        </a>
+      </strong>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`should return when clicking on the button a container with the list of contacts 1`] = `
+<div
+  class="sc-hKMtZM eFmTwW"
+  data-testid="container-contacts"
+>
+  <div
+    class="sc-eCYdqJ itnBEX"
+  >
+    <li>
+      <a
+        href="https://wa.me/21989710023"
+        rel="noreferrer"
+        target="_blank"
+        title="Whatsapp"
+      >
+        <i>
+          <img
+            alt="Icone Whatsapp"
+            src="https://raw.githubusercontent.com/malltdev/bcontact/main/lib/icons/whatsapp.svg"
+          />
+        </i>
+        Whatsapp
+      </a>
+    </li>
+    <li
+      data-testid="list-contact"
+    >
+      <a
+        href="https://t.me/marcuslorenlopes"
+        rel="noreferrer"
+        target="_blank"
+        title="Telegram"
+      >
+        <i>
+          <img
+            alt="Icone Telegram"
+            src="https://raw.githubusercontent.com/malltdev/bcontact/main/lib/icons/telegram.svg"
+          />
+        </i>
+        Telegram
+      </a>
+    </li>
+    <li
+      data-testid="list-contact"
+    >
+      <a
+        href="mailto:marcusltorres@gmail.com"
+        title="Email"
+      >
+        <i>
+          <img
+            alt="Icone Email"
+            src="https://raw.githubusercontent.com/malltdev/bcontact/main/lib/icons/email.svg"
+          />
+        </i>
+        Email
+      </a>
+    </li>
+    <li
+      data-testid="list-contact"
+    >
+      <a
+        href="tel:+21989710023"
+        title="Ligar"
+      >
+        <i>
+          <img
+            alt="Icone Ligar"
+            src="https://raw.githubusercontent.com/malltdev/bcontact/main/lib/icons/ligar.svg"
+          />
+        </i>
+        Ligar
+      </a>
+    </li>
+  </div>
+  <div
+    class="sc-gsnTZi dIYHNY"
+  >
+    <p>
+      Powered by
+       
+      <strong>
+        <a
+          href="https://bcontact.com.br"
+        >
+          B.Contact
+        </a>
+      </strong>
+    </p>
+  </div>
+</div>
+`;
