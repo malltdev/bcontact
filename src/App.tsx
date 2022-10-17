@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import { useEffect, useState } from "react";
-import root from "react-shadow/styled-components";
 import { AppProvider } from "./context/AppProvider";
 import Button from "./components/Button";
 import ContactList from "./components/ContactList";
@@ -44,13 +43,11 @@ function App() {
 
   return (
     <AppProvider>
-      <root.div>
-        <GlobalStyles />
-        <Container align={align}>
-          <ContactList />
-          <Button />
-        </Container>
-      </root.div>
+      <GlobalStyles />
+      <Container align={align}>
+        <ContactList />
+        <Button />
+      </Container>
     </AppProvider>
   );
 }

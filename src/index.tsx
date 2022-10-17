@@ -1,13 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import root from "react-shadow/styled-components";
 import App from "./App";
 
-const root = ReactDOM.createRoot(
+const rootElement = ReactDOM.createRoot(
   document.getElementById("BContact") as HTMLElement
 );
 
-root.render(
+rootElement.render(
   <React.StrictMode>
-    <App />
+    <root.div>
+      <App />
+    </root.div>
   </React.StrictMode>
 );
